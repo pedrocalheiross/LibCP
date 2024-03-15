@@ -1,0 +1,2 @@
+# LibCP
+Competitive Programming
