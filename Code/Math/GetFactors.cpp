@@ -1,14 +1,11 @@
-vector<pii> getFact(int n){
-  vector<pii> primes;
-  for(int p = 2; p*p <= n; p++){
-    if(n % p == 0){
-      int exp = 0;
-      while(n % p == 0){
-        exp++;
-        n /= p;
-      }
+vector<ll> getFact(ll y){
+  vector<ll> ret;
+  for(ll i =2; i*i <=y;i++){
+    while(y%i==0){
+      ret.push_back(i);
+      y/=i;
     }
-    primes.push_back({p,exp});
   }
-  return primes;
+  if(y>1) ret.push_back(y);
+  return ret;
 }
